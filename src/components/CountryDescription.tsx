@@ -12,7 +12,7 @@ const StyledMotionCountryDescriptionContainer = styled(motion.div)`
     min-height: 86vh;
 `;
 const StyledMotionCountryDescriptionTitle = styled(motion.h1)`
-    font-size: 3rem
+    font-size: 15rem
 `;
 
 export const CountryDescription = () => {
