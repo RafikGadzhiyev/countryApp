@@ -1,10 +1,12 @@
 import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { motion } from "framer-motion";
 import { Header } from './components/Header';
 import { Main } from "./components/Main";
 import { createGlobalStyle } from "styled-components";
 import { useDispatch } from "react-redux";
 import { init } from "./redux/actions/Main.action";
+import { CountryDescription } from "./components/CountryDescription";
 
 const GlobalStyles = createGlobalStyle`
   *{
@@ -27,12 +29,13 @@ function App() {
 	}, [dispatch])
 
 	return (
-
-		<motion.div>
-			<GlobalStyles />
-			<Header />
-			<Main />
-		</motion.div>
+		<Router>
+			<motion.div>
+				<GlobalStyles />
+				<Header />
+				<Main />
+			</motion.div>
+		</Router>
 	);
 }
 
