@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import *  as stateTypes from './../types/StatesType'
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
@@ -40,7 +41,9 @@ export const Header = () => {
             animate={state.ThemeSwitcher.currentTheme}
             variants={HeaderVariants}
         >
-            <StyledMotionH1 className='header_content-title'>Where in the world?</StyledMotionH1>
+            <Link to='/'>
+                <StyledMotionH1 className='header_content-title'>Where in the world?</StyledMotionH1>
+            </Link>
             <StyledMotionButton
                 className='header_content-toggle_theme-button'
                 onClick={() => dispatch(state.ThemeSwitcher.currentTheme === 'light' ? DarkMode() : LightMode())}

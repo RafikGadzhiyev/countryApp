@@ -1,12 +1,11 @@
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { motion } from "framer-motion";
 import { Header } from './components/Header';
 import { Main } from "./components/Main";
 import { createGlobalStyle } from "styled-components";
 import { useDispatch } from "react-redux";
 import { init } from "./redux/actions/Main.action";
-import { CountryDescription } from "./components/CountryDescription";
 
 const GlobalStyles = createGlobalStyle`
   *{
@@ -18,6 +17,10 @@ const GlobalStyles = createGlobalStyle`
 
   button{
 	color: inherit
+  }
+  a{
+	  color: inherit;
+	  text-decoration: none;
   }
 `
 
