@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { motion } from 'framer-motion'
 import { CountryVariants, CountryInfoVariants } from '../variants/CountryVariants'
@@ -37,7 +38,11 @@ export const Country = (props: { country: any }) => {
             src={props.country.flags.png}
         />
         <StyledMotionCountryInformationContainer>
-            <StyledMotionCountryName>{props.country.name.common}</StyledMotionCountryName>
+            <Link
+                to={`/country_description/${props.country.name.common}`}
+            >
+                <StyledMotionCountryName>{props.country.name.common}</StyledMotionCountryName>
+            </Link>
             <StyledMotionCountryInformationP>
                 <StyledMotionCountryInformationB>
                     Population:
