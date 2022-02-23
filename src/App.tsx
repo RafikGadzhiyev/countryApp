@@ -16,7 +16,8 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button{
-	color: inherit
+	color: inherit;
+	cursor: pointer;
   }
   a{
 	  color: inherit;

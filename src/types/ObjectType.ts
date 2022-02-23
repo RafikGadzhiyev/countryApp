@@ -7,6 +7,7 @@ export interface Country {
         png: string,
         svg: string
     },
+    borders: Array<string>,
     population: number,
     region: string,
     subregion: string,
@@ -19,5 +20,6 @@ export interface Country {
         }
     },
     languages: Object,
+    cca2: string
 
 }

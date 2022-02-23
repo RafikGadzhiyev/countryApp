@@ -8,10 +8,17 @@ import * as stateTypes from './../types/StatesType'
 const StyledMotionCountry = styled(motion.li)`
     border-radius: 5px;
     overflow: hidden;
+    width: min-content;
 `
 const StyledMotionCountryFlag = styled(motion.img)`
     width: 400px;
     height: 250px;
+
+    @media screen and (max-width: 550px){
+        width: 250px;
+        height: 150px;
+    }
+
 `
 const StyledMotionCountryName = styled(motion.h4)`
     margin-bottom: 10px;
@@ -39,7 +46,7 @@ export const Country = (props: { country: any }) => {
         />
         <StyledMotionCountryInformationContainer>
             <Link
-                to={`/country_description/${props.country.name.common}`}
+                to={`/country_description/${props.country.cca2}`}
             >
                 <StyledMotionCountryName>{props.country.name.common}</StyledMotionCountryName>
             </Link>

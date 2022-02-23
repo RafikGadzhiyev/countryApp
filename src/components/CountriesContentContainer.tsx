@@ -14,11 +14,20 @@ const StyledMotionFilterAndSearchDiv = styled(motion.div)`
     display: flex;
     justify-content: space-between;
     align-items:center;
+
+    
+    @media screen and (max-width: 700px){
+        flex-direction: column;
+        gap: 20px;
+    }
+
 `;
 const StyledMotionSearchForm = styled(motion.form)`
     padding: 5px 20px;
     position: relative;
     border-radius: 2.5px;
+
+
 `;
 const StyledMotionSearchIcon = styled(motion.i)``;
 const StyledMotionInput = styled(motion.input)`
@@ -32,6 +41,18 @@ const StyledMotionInput = styled(motion.input)`
 
     &::placeholder{
         color: ${props => props.theme === 'dark' ? 'white' : ''}
+    }
+
+    @media screen and (max-width: 555px){
+        width: 250px;
+    }
+
+    @media screen and (max-width: 460px){
+        width: 150px;
+    }
+
+    @media screen and (max-width: 325px){
+        width: 120px;
     }
 
 `;
@@ -174,6 +195,7 @@ export const CountriesContentContainer = () => {
         <>
             <StyledMotionFilterAndSearchDiv>
                 <StyledMotionSearchForm
+                    // сlass='responsive-form-container'
                     animate={theme}
                     variants={FormVariants}
                 >
@@ -244,8 +266,9 @@ export const CountriesContentContainer = () => {
                             sx={{
                                 backgroundColor: 'rgba(255, 255, 255, .2)',
                                 color: "white",
-                                borderRadius: '5px'
+                                borderRadius: '5px',
                             }}
+                            className='pagination-container'
                             count={Math.ceil(countries.length / 8)}
                             shape='rounded'
                             color='primary'

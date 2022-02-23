@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import reportWebVitals from './reportWebVitals';
 import mainStore from "./redux/state/state";
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import './styles/responsive.css'
 
 ReactDOM.render(
   <React.StrictMode>

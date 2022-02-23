@@ -12,6 +12,11 @@ const StyledMotionHeader = styled(motion.header)`
     justify-content: space-between;
     align-items: center;
     position: relative;
+
+    @media screen and (max-width: 480px){
+        padding-inline: 20px;
+    }
+
 `
 
 const StyledMotionButton = styled(motion.button)`
@@ -29,6 +34,15 @@ const StyledMotionIcon = styled(motion.i)`
 
 const StyledMotionH1 = styled(motion.h1)`
     font-size: 25px;
+    
+    @media screen and (max-width: 555px){
+        font-size: 20px;
+    }
+
+    @media screen and (max-width: 350px){
+        font-size: 16px;
+    }
+
 `
 
 export const Header = () => {

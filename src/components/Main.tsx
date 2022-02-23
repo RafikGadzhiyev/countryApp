@@ -11,7 +11,12 @@ import { CountryDescription } from './CountryDescription';
 const StyledMotionMain = styled(motion.main)`
     width: 100%;
     min-height: 93.7vh;
-    padding: 35px 60px
+    padding: 35px 60px;
+
+    @media screen and (max-width: 463px){
+        padding-inline: 10px;
+    }
+
 `;
 
 
