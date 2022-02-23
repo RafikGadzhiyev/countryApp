@@ -15,12 +15,38 @@ const StyledMotionCountryDescriptionContainer = styled(motion.div)`
 const StyledMotionCountryImageContainer = styled(motion.div)`
     width: 42.5%;
     height: 50%;
+
+    @media screen and (max-width: 1700px){
+        width: 50%;
+    }
+
+    @media screen and (max-width: 1600px){
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
 `;
+
+const StyledCountryContainer = styled.div`
+    display: flex;
+    width: 100%;
+
+    @media screen and (max-width: 1600px){
+        flex-direction: column;
+    }
+
+`
+
 const StyledMotionCountryImage = styled(motion.img)`
     width: 650px;
     height: 450px;
+
+
 `;
-const StyledMotionDescriptionContainer = styled(motion.div)``;
+const StyledMotionDescriptionContainer = styled(motion.div)`
+    text-align:center;
+`;
 const StyledMotionCountryTitle = styled(motion.h2)`
     margin-block: 50px;
     font-size: 1.8rem;
@@ -102,7 +128,7 @@ export const CountryDescription = () => {
                             Back
                         </StyledBackButton>
                     </Link>
-                    <div style={{ display: 'flex', width: '100%', }}>
+                    <StyledCountryContainer>
                         <StyledMotionCountryImageContainer>
                             <StyledMotionCountryImage
                                 src={countryDescription[0]?.flags.svg}
@@ -194,7 +220,7 @@ export const CountryDescription = () => {
                                 }
                             </StyledBorderCountriesContainer>
                         </StyledMotionDescriptionContainer>
-                    </div>
+                    </StyledCountryContainer>
                 </>
             }
         </StyledMotionCountryDescriptionContainer>
