@@ -42,11 +42,19 @@ const StyledMotionCountryImage = styled(motion.img)`
     width: 650px;
     height: 450px;
 
+    @media screen and (max-width: 750px){
+        width: 450px;
+        height: 250px;
+    }
+
+
+    @media screen and (max-width: 450px){
+        width: 300px;
+        height: 200px;
+    }
 
 `;
-const StyledMotionDescriptionContainer = styled(motion.div)`
-    text-align:center;
-`;
+const StyledMotionDescriptionContainer = styled(motion.div)``;
 const StyledMotionCountryTitle = styled(motion.h2)`
     margin-block: 50px;
     font-size: 1.8rem;
@@ -55,6 +63,11 @@ const StyledBorderCountriesContainer = styled.div`
     display: flex;
     gap: 15px;
     align-items:center;
+
+    @media screen and (max-width: 750px){
+        flex-wrap: wrap;
+    }
+
 `;
 
 const StyledBorderCountriesButton = styled.button`
@@ -72,6 +85,16 @@ const StyledMotionDescriptionGrid = styled(motion.div)`
     gap: 10px 150px;
     flex-wrap: wrap;
     height: 150px;
+
+    
+    @media screen and (max-width: 800px){
+        flex-wrap: nowrap;
+        height: auto;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
 `;
 const StyledBackButton = styled.button`
     padding: 5px 15px;
