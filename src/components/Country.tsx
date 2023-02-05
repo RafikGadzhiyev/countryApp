@@ -22,6 +22,7 @@ const StyledMotionCountryFlag = styled(motion.img)`
 `
 const StyledMotionCountryName = styled(motion.h4)`
     margin-bottom: 10px;
+    text-decoration: underline;
 `;
 const StyledMotionCountryInformationContainer = styled(motion.div)`
     padding: 20px;
